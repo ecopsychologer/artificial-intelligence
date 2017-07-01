@@ -1,4 +1,6 @@
-### Neural Network Code
+### Artificial Intelligence Stuff
+
+# Neural Network Code
 ```python
 import numpy as np
 
