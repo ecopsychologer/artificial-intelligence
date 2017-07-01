@@ -8,18 +8,18 @@ def nonlin(x, deriv=False):
     return 1 / (1+np.exp(-x))
 
 # input data
-X = np.array([[0, 0, 1, 1], [1, 0, 0, 0], [0, 1, 0, 1], [1, 1, 1, 0]])
+X = np.array([[0, 0, 1, 1], [1, 0, 0, 0], [0, 1, 0, 1], [1, 1, 1, 0], [1, 1, 1, 1], [0, 0, 0, 0]])
 
 # output data
-y = np.array([[0], [1], [1], [1]])
+y = np.array([[0], [1], [1], [1], [0], [0]])
 
 np.random.seed(1)
 
 # synapses
-syn0 = 2*np.random.random((4, 4)) - 1
-syn1 = 2*np.random.random((4, 4)) - 1
-syn2 = 2*np.random.random((4,4)) - 1
-syn3 = 2*np.random.random((4, 1)) - 1
+syn0 = 2*np.random.random((4, 6)) - 1
+syn1 = 2*np.random.random((6, 6)) - 1
+syn2 = 2*np.random.random((6,6)) - 1
+syn3 = 2*np.random.random((6, 1)) - 1
 
 # training step
 for j in range(60000):
@@ -57,7 +57,7 @@ for j in range(60000):
 print("Output after training")
 print(l4)
 
-n = np.array([[0, 0, 1, 1], [0, 1, 0, 1], [1, 0, 0, 1], [1, 1, 1, 1]])
+n = np.array([[0, 0, 1, 1], [0, 1, 0, 1], [1, 0, 0, 1], [1, 1, 1, 1], [1, 1, 1, 0], [0, 0, 0, 0]])
 
 j0 = n
 j1 = nonlin(np.dot(j0, syn0))
@@ -69,6 +69,3 @@ j4 = nonlin(np.dot(j3, syn3))
 print("Output after testing")
 print(j4)
 
-# sample arrays, format = array/solution
-# np.array([[1, 0, 1, 1], [0, 1, 0, 1], [1, 0, 1, 0], [0, 1, 0, 1]]) / np.array([[0], [1], [0], [1]])
-# np.array([[0, 0, 1, 1], [0, 1, 0, 1], [1, 0, 0, 1], [1, 1, 1, 1]]) / np.array([[1], [1], [1], [0]])
