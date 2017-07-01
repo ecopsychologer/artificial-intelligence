@@ -1,5 +1,7 @@
 ## Project Scripts
 One with a test:
+http://gist-it.appspot.com/http://github.com/jcschoen/neural-network/blob/master/neural%20net_neural%20net%20test.py
+<script src="http://gist-it.appspot.com/http://github.com/jcschoen/neural-network/blob/master/neural%20net_neural%20net%20test.py"></script>
 ```python
 import numpy as np
 
