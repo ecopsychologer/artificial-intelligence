@@ -1,6 +1,6 @@
-### Artificial Intelligence Stuff
+# Artificial Intelligence Stuff
 
-# Neural Network Code
+### Neural Network Code
 ```python
 import numpy as np
 
